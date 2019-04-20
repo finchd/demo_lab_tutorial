@@ -23,26 +23,27 @@ in VSCode.   Hit Ctrl-C to stop it.
 
 """
 
+
 class ThunderBotPlugin(MachineBasePlugin):
 
     # The bot framework (Slack Machine)
     # Can Listen or Respond, based on the decorators
-    
+
     # A reploy_to decorator will only react when
     # something is sent directly to the bot (your account)
 
-    # A match is done by Regex - we will see 
+    # A match is done by Regex - we will see
     # some more complex examples further down
 
-    @respond_to(r'Winner Winner')
+    @respond_to(r"Winner Winner")
     def winner_winner(self, msg):
         """
         Reply with 'Chicken Dinner' every time
         someone sends `@yourslackname winner winner`
         """
 
-        # You send a message back to the 
-        # channel by using methods on the 
+        # You send a message back to the
+        # channel by using methods on the
         # msg object.
         # We will use the `reply` method here
         # that will respond in channel to
@@ -52,7 +53,7 @@ class ThunderBotPlugin(MachineBasePlugin):
     # `listen_to` is another decorator that will
     # passivly listen to a chanel for any matching
     # expression, and then take action.
-    @listen_to(r'^What do we want$')
+    @listen_to(r"^What do we want$")
     def what_do_we_want(self, msg):
         """
         Say a phrase into the channel based on
@@ -67,7 +68,7 @@ class ThunderBotPlugin(MachineBasePlugin):
     # The Regex in the decorator can capture variables
     # Test Regex at https://regex101.com/
 
-    @respond_to(r'^parrot(?:\s+)(?P<phrase>.*)$')
+    @respond_to(r"^parrot(?:\s+)(?P<phrase>.*)$")
     def parrot(self, msg, phrase):
         """
         Reploy to sender with whatever was in
