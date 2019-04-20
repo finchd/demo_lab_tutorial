@@ -1,0 +1,11 @@
+{
+    "python.pythonPath": "/home/coder/.virtualenvs/slackbot/bin/python",
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 18,
+    "debug.console.fontSize": 16,
+    "terminal.integrated.fontSize": 16,
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.vscode": true
+    }
+}
