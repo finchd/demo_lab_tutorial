@@ -2,6 +2,7 @@ from machine.bin.run import main
 from machine.plugins.base import MachineBasePlugin
 from machine.plugins.decorators import listen_to, respond_to
 import re
+import random
 
 """
 To use this demo:
@@ -78,6 +79,12 @@ class ThunderBotPlugin(MachineBasePlugin):
         """
 
         msg.reply(f"BAWK!! {phrase}")
+
+    @listen_to(r'The Question is "(?P<formula>.*)"')
+    def guess(self, msg, formula):
+        random_color = random.randint(0, 16_777_215)
+        answer = eval(formula)
+        msg.say(f"!game {answer} #{random_color:06x}")
 
 
 if __name__ == "__main__":
