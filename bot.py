@@ -6,8 +6,10 @@ import re
 """
 To use this demo:
 
-1) Register with the ChatBotAllTheThings Slack workspace with the following link
-http://bit.ly/chat-lfnw-2019
+1) You should have alrady registered in the
+ChatBotAllTheThings Slack workspace using the link at
+
+https://sites.google.com/view/chat-lfnw2019
 
 2) Get a Legacy Token for the ChatBotAllTheThings workspace here:
 https://api.slack.com/custom-integrations/legacy-tokens
